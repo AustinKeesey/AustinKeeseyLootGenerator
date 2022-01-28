@@ -6,9 +6,26 @@ namespace AustinKeeseyLootGenerator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+        // Checks if the user added a command line argument
+        // Also checks if the first argument is "test"
+        if (args.Length > 0 && args[0] == "test")
+        {
+            TestAll();
+            return; // Exits the program
         }
-        public static string GetValidInt()
+
+        // Otherwise, the program continues executing
+     }
+
+
+        public static void TestAll()
+        {
+            bool testGetValidInt = TestGetValidInt.Runtests();
+            Console.WriteLine($"Test LoadFile(GetValidInt): {testGetValidInt}"); 
+
+            bool testGetUserSelection = TestGetUserSelection.Runtests();
+            Console.WriteLine($"Test LoadFile(GetValidInt): {testGetValidInt}"); 
+        }
         {
         // 1. Validate the prompt is a string
         // 2. Displayt the Prompt
