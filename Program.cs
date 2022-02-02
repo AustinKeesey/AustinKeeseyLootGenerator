@@ -14,7 +14,7 @@ namespace AustinKeeseyLootGenerator
             return; // Exits the program
         }
 
-        // Otherwise, the program continues executing
+        // Otherwise, the program continues
      }
 
 
