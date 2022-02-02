@@ -44,7 +44,7 @@ Type[TypeIndex] + " " + Element[ElementIndex] + " " + Theme[ThemeIndex];
 ![Connector Image](images/GenerateRandomLoot.png)
 
 
-![Connector Image](images/PlayAgain.png)
+![Connector Image](images/Display.png)
 
 
 ![Connector Image](images/Content.png)
