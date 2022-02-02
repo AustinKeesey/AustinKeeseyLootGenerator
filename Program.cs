@@ -26,6 +26,9 @@ namespace AustinKeeseyLootGenerator
             bool testGetUserSelection = TestGetUserSelection.Runtests();
             Console.WriteLine($"Test LoadFile(GetValidInt): {testGetValidInt}"); 
         }
+
+        // TODO(jcollard 2022-02-02): You're missing a method stub for GetUserSelection
+        // I think it should be here
         {
         // 1. Validate the prompt is a string
         // 2. Displayt the Prompt
@@ -44,6 +47,12 @@ namespace AustinKeeseyLootGenerator
         /// <returns>TODO: Complete documentaiton</returns>
         public static int GetValidInt(string prompt)
         {
+
+            // TODO(jcollard 2022-02-02): These step-by-step instructions do not match the
+            // method summary. How does this method work? What is it supposed to do?
+            
+            // TODO(jcollard 2022-02-02): The list below appears to be related to 
+            // a method which should probably be called GenerateRandomItem
             // TODO 1.) Create a random loot generator
 // 2.) Generate a random number, TypeIndex, between 0 and Type.Count
 // 3.) Generate a random number, ElementIndex, between 0 and Element.Count
