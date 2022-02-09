@@ -39,6 +39,11 @@ namespace AustinKeeseyLootGenerator
             // - display an error message
             // - go to step 2
             // 5. Otherwise, return the users input
+
+            // Feedback(jcollard 2022-02-09): Complete this method second
+            // Here is an example showing how to randomly generate an item from
+            // a list.
+            // https://jcollard.github.io/IntroToCSharpSite/examples/random-dog-generator
             return null;
         }
 
@@ -62,6 +67,11 @@ namespace AustinKeeseyLootGenerator
             // 5.) Combine the different aspects of the loot together
             // Type[TypeIndex] + " " + Element[ElementIndex] + " " + Theme[ThemeIndex];
             // 6.) Return the loot
+
+            // Feedback(jcollard 2022-02-09): Complete this method first
+            // Here is an example of reading user input:
+            // https://jcollard.github.io/IntroToCSharpSite/examples/read-input
+
             return -1;
         }
     }
