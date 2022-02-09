@@ -8,10 +8,8 @@ namespace AustinKeeseyLootGenerator
         public static bool Runtests()
         {
             Program.GenerateRandomLoot(weapons, elements, powers);
-        }
-    {
+            
         return false;
-    }
-    
+        }
     }
 }
