@@ -1,5 +1,10 @@
 # AustinKeeseyLootGenerator
 
+
+## Description
+The loot generator is a list of possible loot. It has various loot types, loot elements, and loot themes. All of these aspects can be formed together to generate numerous possible loot combinations. 
+
+
 ## Overview
 The Purpose of Random Loot Generator is to provide awesome different combinations of loot that the player can be entertained by. The program runs the different combinations of loot and then the program writes the random generation. It accepts input from the user by letting them specify whether they would like another shot at different generated loot by saying yes or no. 
 
@@ -43,8 +48,28 @@ Type[TypeIndex] + " " + Element[ElementIndex] + " " + Theme[ThemeIndex];
 ## FlowCharts
 ![Connector Image](images/GenerateRandomLoot.png)
 
-
+#### Int GetValidInt
+Given a prompt to show the user, display the prompt then reads from the input from the keyboard until the user enters an invalid type, this method displays an error message that prompts the user to try again.
 ![Connector Image](images/Display.png)
 
+1. Validate the prompt is a string
+2. Display the prompt
+3. Read input from the user
+4. If the user entered an Invalid weapon, element, or theme, 
+   - display the error message
+   - go to step 2
+5. Otherwise, return the users input
 
+
+
+#### String GenerateRandomLoot
+Given a list of weapons, themes, and elements, generate random loot from each list.
 ![Connector Image](images/Content.png)
+
+1.) Create a random loot generator
+2.) Generate a random number, TypeIndex, between 0 and Type.Count
+3.) Generate a random number, ElementIndex, between 0 and Element.Count
+4.) Generate a random number, ThemeIndex, between 0 and Theme.Count
+5.) Combine the different aspects of the loot together
+   Type[TypeIndex] + " " + Element[ElementIndex] + " " + Theme[ThemeIndex];
+6.) Return the loot

@@ -24,11 +24,11 @@ namespace AustinKeeseyLootGenerator
             bool testGetValidInt = TestGetValidInt.Runtests();
             Console.WriteLine($"Test LoadFile(GetValidInt): {testGetValidInt}");
 
-            bool testGetUserSelection = TestGetUserSelection.Runtests();
-            Console.WriteLine($"Test LoadFile(GetValidInt): {testGetValidInt}");
+            bool testGenerateLoot = TestGenerateLoot.Runtests();
+            Console.WriteLine($"Test LoadFile(GetValidInt): {testGenerateLoot}");
         }
 
-        public static string GenerateLoot(List<string> weaponType, List<string> ElementType, List<string>ThemeType)
+        public static string GenerateLoot(string WeaponType, List<string> ElementType, List<string>ThemeType)
         {
             // 1. Validate the prompt is a string
             // 2. Display the Prompt
