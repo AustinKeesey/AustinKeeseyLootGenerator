@@ -1,48 +1,68 @@
 using System;
-using System.IO;
 
 namespace AustinKeeseyLootGenerator
 {
-
     class TestGetValidInt
     {
-        public static bool Runtests()
-    {
-        Console.WriteLine("The method should display 'How many options would you like?'");
-        Console.WriteLine("Type '!'. You should see 'Invalid!'");
-        Console.WriteLine("Then type '-4'. You should see 'Invalid'.");
-        int result = Program.GetValidInt("How many options would you like?");
-
-        if (result !=3)
+        public static bool RunTest()
         {
-            Console.Error.WriteLine($"The result was expected to be 3 but it was {result}.");
-            return false;
-        }        
-
-
-
-            // TODO(jcollard 2022-02-02): Make a call to the method ValidateInput:
-            // Program.GetValidInt("Some String Here");
-            // What should the user see when this method is called?
-            // What inputs should the user test? Give the tester instructions on how they
-            // should test the method. e.g. "Enter 'a'. This should result in an invalid message."
-            // "Then, enter -2. This should result in an invalid message."
-            // "Finally, enter a valid option 4. This should result in the method returning the int value 4."
-
-            Console.WriteLine("Testing GetValidInt with the string 'How many items to generate?'");
-            Console.WriteLine("You should expect to see ?????");
-            Console.WriteLine("Type a. This should result in ????.");
-            Console.WriteLine("Type -5. This should result in ????.");
-            Console.WriteLine("Type 3. This should result in ????.");
-            int result = Program.GetValidInt("How many items to generate?");
-
-            if (result != ???) // Check that the result is the expected value. If it is NOT the expected value
+            Console.WriteLine("the method should display 'How many options would you like?'");
+            Console.WriteLine("type '-'. You should see 'invalid!'");
+            Console.WriteLine("Then type '-4'. You should see 'invalid!'");
+            
+           
+            int result = Program.GetValidInt("how many options would you like");
+            
+            if (result != 3)
             {
-                Console.Error.WriteLine($"Failed: Expected the result to be ???? but was {result}.");
+                Console.Error.WriteLine($"The result was expected to be 3 but was {result}.");
                 return false;
             }
-        return false;
+
+            Console.WriteLine("the Method should display 'How many options would you like?'");
+            Console.WriteLine("type 'apple'. You should see 'invalid!'");
+            Console.WriteLine("then type '-12'. You should see invalid.");
+
+            result = Program.GetValidInt("How old are you?");
+
+            if (result != 4)
+            {
+                Console.Error.WriteLine($"The result was expeected to be 4 but was {result}.");
+                return false;
+            }
+
+            Console.WriteLine("The method should display 'how many options would like?'");
+            Console.WriteLine("type 'chair'. You should see 'invalid'");
+            Console.WriteLine("then type '-9'. You should see invalid.");
+
+            int result2 = Program.GetValidInt("what is your favorite color");
+
+            if (result2 !=2)
+            {
+                Console.Error.WriteLine($"The result expected to be 2 but was {result2}.");
+                return false;
+            }
+
+            Console.WriteLine("the method should display 'how many optiona would you like?'");
+            Console.WriteLine("type 'monkey'. You should see 'invalid.'");
+            Console.WriteLine("then type '5'. You should see 'valid'");
+
+            int result3 = Program.GetValidInt("How many weapons do you want.");
+
+            if (result3 != 5)
+            {
+                Console.Error.WriteLine($"The result was expected to be 5 but was {result3}.");
+                return false;
+            }
+
+            if (result3 == 5)
+            {
+                Console.WriteLine($"The result was {result3}.");
+            }
+
+            return true;
+        }
+
     }
     
-    }
 }
