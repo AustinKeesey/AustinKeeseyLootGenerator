@@ -28,7 +28,9 @@ namespace AustinKeeseyLootGenerator
             Console.WriteLine($"Test LoadFile(GetValidInt): {testGenerateLoot}");
         }
 
-        public static string GenerateLoot(string WeaponType, List<string> ElementType, List<string>ThemeType)
+        // TODO(jcollard 2022-02-02): You're missing a method stub for GetUserSelection
+        // I think it should be here
+        public static string GenerateLoot(List<string> weaponType, List<string> ElementType, List<string>ThemeType)
         {
             // 1. Validate the prompt is a string
             // 2. Display the Prompt
@@ -37,6 +39,11 @@ namespace AustinKeeseyLootGenerator
             // - display an error message
             // - go to step 2
             // 5. Otherwise, return the users input
+
+            // Feedback(jcollard 2022-02-09): Complete this method second
+            // Here is an example showing how to randomly generate an item from
+            // a list.
+            // https://jcollard.github.io/IntroToCSharpSite/examples/random-dog-generator
             return null;
         }
 
@@ -47,6 +54,12 @@ namespace AustinKeeseyLootGenerator
         /// <returns>TODO: Complete documentaiton</returns>
         public static int GetValidInt(string prompt)
         {
+
+            // TODO(jcollard 2022-02-02): These step-by-step instructions do not match the
+            // method summary. How does this method work? What is it supposed to do?
+            
+            // TODO(jcollard 2022-02-02): The list below appears to be related to 
+            // a method which should probably be called GenerateRandomItem
             // TODO 1.) Create a random loot generator
             // 2.) Generate a random number, TypeIndex, between 0 and Type.Count
             // 3.) Generate a random number, ElementIndex, between 0 and Element.Count
@@ -54,6 +67,11 @@ namespace AustinKeeseyLootGenerator
             // 5.) Combine the different aspects of the loot together
             // Type[TypeIndex] + " " + Element[ElementIndex] + " " + Theme[ThemeIndex];
             // 6.) Return the loot
+
+            // Feedback(jcollard 2022-02-09): Complete this method first
+            // Here is an example of reading user input:
+            // https://jcollard.github.io/IntroToCSharpSite/examples/read-input
+
             return -1;
         }
     }
