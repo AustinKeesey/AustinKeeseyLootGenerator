@@ -14,11 +14,29 @@ namespace AustinKeeseyLootGenerator
                 return; // Exits the program
             }
 
+            
+
             // TODO(jcollard 2022-02-11):
             // 1. Prompt the user to get their input from GetValidInt
             // 2. Create an Elements List
             // 3. Create a Powers List
             // 4. Call GenerateRandomLoot with the proper arguments
+
+            
+            List<string> elements = new List<string>();
+
+            elements.Add("fire");
+            elements.Add("ice");
+            elements.Add("lightning");
+
+            List<string> themes = new List<string>();
+
+            themes.Add("godly");
+            themes.Add("cursed");
+            themes.Add("magical");
+
+            List<string> weapons = null;
+            GenerateLoot(weapons, elements, themes);
         }
 
 
@@ -30,12 +48,32 @@ namespace AustinKeeseyLootGenerator
             bool testGenerateLoot = TestGenerateLoot.Runtests();
             Console.WriteLine($"Test LoadFile(GetValidInt): {testGenerateLoot}");
         }
-        public static string GenerateLoot(List<string> weaponType, List<string> ElementType, List<string> ThemeType)
+        public static string GenerateLoot(List<string> weapons, List<string> elements, List<string> themes)
         {
             // TODO(jcollard 2022-02-11): You're almost done! This method is a
             // little tricky but I've created an example that I hope will help:
             // https://jcollard.github.io/IntroToCSharpSite/examples/random-dog-generator
-            return null;
+
+            
+
+            Random generator = new Random();
+            int index = generator.Next(0, weapons.Count);
+
+            string randomWeapon = weapons[index];
+            // Console.WriteLine($"You found a {randomWeapon}");
+
+            int index2 = generator.Next(0, elements.Count);
+
+            string randomElement = elements[index2];
+            // Console.WriteLine($"You found a {randomElement}");
+
+            int index3 = generator.Next(0, themes.Count);
+
+            string randomTheme = themes[index3];
+            // Console.WriteLine($"You found a {randomTheme}");
+
+
+            return $"{randomWeapon} {randomElement} {randomTheme}";
         }
 
         public static int GetValidInt(string prompt)
@@ -56,13 +94,14 @@ namespace AustinKeeseyLootGenerator
                     Console.Error.WriteLine("you failed to enter a number");
 
                 }
-                else if (userChoice >= 4) //TODO(jcollard 2022-02-11): What if the user selects 0? or -5?
+                else if (userChoice >= 4 || userChoice <= 0) //TODO(jcollard 2022-02-11): What if the user selects 0? or -5?
                 {
                     Console.WriteLine("That is not a number 1-3");
+                    
                 }
             }
 
-            while (userChoice < 4); //TODO(jcollard 2022-02-11): Are you sure you should keep looping if the user selected a number less than 4?
+            while (userChoice >= 4 || userChoice <= 0); //TODO(jcollard 2022-02-11): Are you sure you should keep looping if the user selected a number less than 4?
 
             return userChoice;
 
