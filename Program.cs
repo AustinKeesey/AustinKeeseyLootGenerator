@@ -35,8 +35,16 @@ namespace AustinKeeseyLootGenerator
             themes.Add("cursed");
             themes.Add("magical");
 
-            List<string> weapons = null;
-            GenerateLoot(weapons, elements, themes);
+
+            while (combos > 0)
+            {
+
+                string loot = GenerateLoot(weapons, elements, themes);
+                Console.WriteLine($"You acquired {loot}");
+                combos = combos - 1;
+            }
+                    // why is this underlined I am confused
+       
         }
 
 
