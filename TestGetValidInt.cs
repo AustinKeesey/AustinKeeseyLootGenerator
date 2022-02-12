@@ -4,7 +4,7 @@ namespace AustinKeeseyLootGenerator
 {
     class TestGetValidInt
     {
-        public static bool RunTest()
+        public static bool Runtests()
         {
             Console.WriteLine("the method should display 'How many options would you like?'");
             Console.WriteLine("type '-'. You should see 'invalid!'");

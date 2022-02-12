@@ -21,7 +21,7 @@ namespace AustinKeeseyLootGenerator
             themes.Add("godly");
             // themes.Add("cursed");
             // themes.Add("magical");
-            string result = Program.GenerateLoot("sword", elements, themes);
+            string result = Program.GenerateLoot(weapons, elements, themes);
 
             if (!result.StartsWith("sword fire godly"))
             {
@@ -30,7 +30,7 @@ namespace AustinKeeseyLootGenerator
 
             }
 
-            string result2 = Program.GenerateLoot("fire", weapons, themes);
+            string result2 = Program.GenerateLoot(elements, weapons, themes);
 
             if (!result2.StartsWith("sword fire godly"))
             {
@@ -38,7 +38,7 @@ namespace AustinKeeseyLootGenerator
                 return false;
             }
             
-            string result3 = Program.GenerateLoot("godly", elements, weapons);
+            string result3 = Program.GenerateLoot(themes, elements, weapons);
             if (!result3.StartsWith("fire godly sword"))
             {
                 Console.Error.WriteLine($"the result was expected to be godly {themes[0]}, {weapons}");

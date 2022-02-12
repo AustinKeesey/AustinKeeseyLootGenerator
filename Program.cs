@@ -35,6 +35,14 @@ namespace AustinKeeseyLootGenerator
             themes.Add("cursed");
             themes.Add("magical");
 
+            List<string> weapons = new List<string>();
+
+            weapons.Add("dagger");
+            weapons.Add("bow and arrow");
+            weapons.Add("axe");
+
+            int combos = GetValidInt("How many loot combinations would you like?");
+
 
             while (combos > 0)
             {
@@ -81,17 +89,22 @@ namespace AustinKeeseyLootGenerator
             // Console.WriteLine($"You found a {randomTheme}");
 
 
-            return $"{randomWeapon} {randomElement} {randomTheme}";
+            return $"{randomTheme} {randomElement} {randomWeapon}";
         }
 
         public static int GetValidInt(string prompt)
         {
 
+            if (prompt == null)
+            {
+                throw new Exception("That is invalid");
+            }
+
             int userChoice;
 
             do
             {
-                Console.Write("Enter a number that is ");
+                Console.Write($"{prompt}: ");
 
                 string input = Console.ReadLine();
 
