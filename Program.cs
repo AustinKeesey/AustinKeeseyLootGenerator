@@ -51,7 +51,7 @@ namespace AustinKeeseyLootGenerator
                 Console.WriteLine($"You acquired {loot}");
                 combos = combos - 1;
             }
-                    // why is this underlined I am confused
+                  
        
         }
 
